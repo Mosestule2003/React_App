@@ -1,0 +1,287 @@
+/* Fonts */
+@font-face {
+  font-family: Inter;
+  src: url(./fonts/Inter-Regular.woff);
+}
+/* Fonts */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root{
+  --main-bg: #FFFFFF;
+  --link-bg: #EAECF0;
+}
+
+.main-section{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-bg);
+}
+
+.content{
+  padding: 4em 7em;
+}
+
+.hidden {
+  display: none;
+}
+
+.profile_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  isolation: isolate;
+  position: relative;
+}
+
+#profile_img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 88px;
+  height: 88px;
+  border-radius: 275px;
+}
+
+#profile_img_hidden{
+  display: none;
+}
+
+.profile_img_container:hover #profile_img_hidden{
+  display: block;
+}
+
+.profile_img_container:hover #profile_img{
+  display: none;
+}
+
+.profile_name{
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.profile_name p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #101828;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.links_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding: 2em 2em;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 32px;
+  gap: 8px;
+  width: 100%;
+  height: 76px;
+  background: #EAECF0;
+  border: 1px solid #EAECF0;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #101828;
+}
+
+.links:hover{
+  background-color: #e1e1e1;
+}
+
+.avatar_share_icon{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -20px;
+  background: #FFFFFF;
+  border: 1px dashed #D0D5DD;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.avatar_share_icon:hover{
+  transform: scale(1.1);
+  background-color: #f6f6f6;
+}
+
+.avatar_icon{
+  width: 15.19px;
+  height: 14.02px;
+}
+
+.avatar_icon_hidden{
+  display: none;
+}
+
+.social_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0px;
+  gap: 64px;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+.social_section_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 32px;
+  gap: 32px;
+  width: 100%;
+}
+
+.social_icon_container{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 24px;
+  width: 100%;
+}
+
+.social_icon{
+  width: 24px;
+  height: 23.45px;
+  margin-left: 1em;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 7em;
+  gap: 64px;
+}
+
+.footer_container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  height: 64px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.footer_content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  gap: 32px;
+  width: 100%;
+  height: 64px;
+  border-top: 1px solid #EAECF0;
+}
+
+.footer_text{
+  height: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;
+  color: #667085;
+  margin-bottom: 1em;
+}
+
+.footer_img{
+  margin-bottom: 1em;
+}
+
+.logo{
+  height: 32px;
+}
+
+.logo2{
+  width: 132.13px;
+  height: 32px;
+}
+
+@media(max-width: 800px){
+  .content, footer{
+      padding: 4em 4em;
+  }  
+
+  .avatar_share_icon{
+      right: 100px;
+  }
+}
+
+@media(max-width: 600px){
+  .avatar_share_icon{
+      right: 50px;
+  }
+
+  .content, footer{
+      padding: 4em 1.5em;
+  }  
+
+  .footer_content{
+      display: block;
+  }
+
+  .avatar_icon{
+      display: none;
+  } 
+  .avatar_icon_hidden{
+      display: block;
+  }
+
+  .bg_change:focus{
+      background-color: #e1e1e1;
+  }
+
+  .links_section{
+      padding: 2em 0;
+  }
+}
